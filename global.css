@@ -1,0 +1,64 @@
+/* Локальный базовый reset, чтобы сайт работал из архива без CDN */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+section,
+article,
+header,
+footer,
+main,
+nav,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Minecraft Ten font cyrillic";
+  src: url("minecraft-ten-font-cyrillic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+a:focus-visible {
+  outline: 2px solid #f0bd2c;
+  outline-offset: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
