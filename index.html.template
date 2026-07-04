@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MineDrop 2 — лёгкий заработок на любимой игре</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero" id="top">
+        <div class="topbar">
+          <div class="wrap topbar__inner">
+            <nav class="menu menu--left" aria-label="Навигация слева">
+              <a href="${GAME_URL}">О ИГРЕ</a>
+              <a href="${GAME_URL}">БОНУСЫ</a>
+            </nav>
+
+            <a class="mainlogo" href="#top" aria-label="MineDrop">
+              <img src="MainLogo.png" alt="MINEDROP" />
+            </a>
+
+            <nav class="menu menu--right" aria-label="Навигация справа">
+              <a href="${GAME_URL}">КАК ИГРАТЬ</a>
+              <a href="${GAME_URL}">ВОЙТИ</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="wrap hero__center">
+          <div class="hero__media" aria-label="Промо-видео">
+            <div class="hero__frame">
+              <video src="video.mp4" autoplay muted loop playsinline preload="metadata" poster="Backrogund.png"></video>
+            </div>
+            <img class="hero__peek hero__peek--left" src="Chest.png" alt="" aria-hidden="true" />
+            <img class="hero__peek hero__peek--right" src="Chest.png" alt="" aria-hidden="true" />
+          </div>
+
+          <div class="hero__actions" aria-label="Действия">
+            <a class="btn play-btn" href="${GAME_URL}">
+              <img class="btn__icon" src="Play.png" width="57" height="56" alt="" aria-hidden="true" />
+              <span>ИГРАТЬ</span>
+            </a>
+            <a class="btn" href="${TELEGRAM_URL}">
+              <img class="btn__icon" src="Telegram App.png" width="57" height="57" alt="" aria-hidden="true" />
+              <span>ИГРАТЬ В ТГ</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <section class="section section--stack" id="about" aria-labelledby="about-title">
+        <div class="wrap">
+          <h2 class="mc-title" id="about-title">О ИГРЕ</h2>
+          <div class="panel">
+            <h3 class="kicker">MINEDROP</h3>
+            <p class="lead">
+              Свежее продолжение среди культовой Minedrop. Её увлекательный и инновационный геймплей стал лишь лучше!
+              Множество обновлений глобально поменяли игру. В сообществе игроков данный слот уже считается одной из самых
+              прибыльных и интересных — не упусти и ты свой шанс.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--stack" id="bonuses" aria-labelledby="bonuses-title">
+        <div class="wrap">
+          <h2 class="mc-title" id="bonuses-title">БОНУСЫ</h2>
+          <div class="panel">
+            <ul class="list" aria-label="Бонусы">
+              <li>30 фриспинов при старте</li>
+              <li>Регулярные промокоды и акции</li>
+              <li>Повышенные множители в пиковые часы</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--stack" id="how" aria-labelledby="how-title">
+        <div class="wrap">
+          <h2 class="mc-title" id="how-title">КАК ИГРАТЬ</h2>
+          <div class="panel">
+            <ul class="list" aria-label="Как играть">
+              <li>Нажмите «Играть» или «Играть в ТГ»</li>
+              <li>Выберите ставку и запустите игру</li>
+              <li>Забирайте бонусы и следите за множителями</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--stack" aria-labelledby="faq-title">
+        <div class="wrap">
+          <h2 class="mc-title" id="faq-title">FAQ И ВОПРОСЫ</h2>
+          <div class="panel">
+            <dl class="faq">
+              <div class="faq__row">
+                <dt class="faq__q">Могу ли я играть на телефоне?</dt>
+                <dd class="faq__a">Конечно! Игра прекрасно адаптирована под любые смартфоны.</dd>
+              </div>
+              <div class="faq__row">
+                <dt class="faq__q">Есть ли бонусы на начале?</dt>
+                <dd class="faq__a">Ты получишь 30 фриспинов, а также бонусы.</dd>
+              </div>
+              <div class="faq__row">
+                <dt class="faq__q">Где искать игру?</dt>
+                <dd class="faq__a">
+                  Игра находится на главной странице Lucky Bear — торопись, сейчас самые высокие коэффициенты на победу.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="wrap panel footer__inner">
+          <div>ИГРАЙТЕ ОТВЕТСТВЕННО. ТОЛЬКО ДЛЯ ЛИЦ СТАРШЕ 18 ЛЕТ.</div>
+          <div class="footer__rule" aria-hidden="true"></div>
+          <div>© 2025 MINEDROP. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      (function () {
+        const video = document.querySelector(".hero__frame video");
+        if (!video) return;
+        video.addEventListener("error", function () {
+          try {
+            video.removeAttribute("src");
+            video.load();
+          } catch (e) {}
+        });
+      })();
+    </script>
+  </body>
+</html>
